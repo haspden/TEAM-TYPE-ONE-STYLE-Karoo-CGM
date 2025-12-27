@@ -1,0 +1,26 @@
+# SHA256 Checksum - Enhance-d Club Glucose - Karoo v2.6.0
+
+## File Verification
+
+**File**: `Enhance-d_Club_Glucose_Karoo_v2.6.0.apk`
+
+**SHA256 Checksum**: 
+```
+b4e33cf867b7b28425f4d690df0dfdfcdf97ab1da03ad890827d928201ab05e9
+```
+
+## How to Verify
+
+### On macOS/Linux:
+```bash
+shasum -a 256 Enhance-d_Club_Glucose_Karoo_v2.6.0.apk
+```
+
+### On Windows:
+```powershell
+Get-FileHash -Algorithm SHA256 Enhance-d_Club_Glucose_Karoo_v2.6.0.apk
+```
+
+The output should match the checksum above.
+
+

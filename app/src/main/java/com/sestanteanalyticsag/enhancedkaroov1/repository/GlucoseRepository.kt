@@ -70,11 +70,10 @@ class GlucoseRepository {
             val service = apiService ?: throw IOException("API service not initialized. Please set a base URL.")
             println("GlucoseRepository: Fetching from API...")
             
-            // Prepare authentication headers
-            val apiSecret = if (currentApiToken.isNotEmpty()) currentApiToken else null
-            val authorization = if (currentApiToken.isNotEmpty()) "Bearer $currentApiToken" else null
+            // Prepare authentication token as query parameter
+            val token = if (currentApiToken.isNotEmpty()) currentApiToken else null
             
-            val entries = service.getGlucoseEntries(apiSecret, authorization)
+            val entries = service.getGlucoseEntries(token)
             println("GlucoseRepository: Received ${entries.size} entries")
 
             if (entries.isNotEmpty()) {
@@ -103,11 +102,10 @@ class GlucoseRepository {
             val service = apiService ?: throw IOException("API service not initialized. Please set a base URL.")
             println("GlucoseRepository: Fetching entries from API...")
             
-            // Prepare authentication headers
-            val apiSecret = if (currentApiToken.isNotEmpty()) currentApiToken else null
-            val authorization = if (currentApiToken.isNotEmpty()) "Bearer $currentApiToken" else null
+            // Prepare authentication token as query parameter
+            val token = if (currentApiToken.isNotEmpty()) currentApiToken else null
             
-            val entries = service.getGlucoseEntries(apiSecret, authorization)
+            val entries = service.getGlucoseEntries(token)
             println("GlucoseRepository: Received ${entries.size} entries")
             Result.success(entries)
         } catch (e: Exception) {
